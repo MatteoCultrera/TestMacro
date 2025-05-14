@@ -15,5 +15,12 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
+      - name: Install Swift
+        uses: fwal/setup-swift@v1
+        with:
+          swift-version: '5.9'
+      - name: Build tests script
+        run: make build-tests-ci
       - name: Run tests
+        working-directory: Scripts/bin
         run: ./test-script

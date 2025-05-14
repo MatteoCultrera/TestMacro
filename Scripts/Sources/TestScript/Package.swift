@@ -18,23 +18,5 @@ let package = Package(
             path: "Sources/TestScript",
             swiftSettings: [.unsafeFlags(["-enable-bare-slash-regex"])]
         ),
-        .target(
-            name: "TestScriptMocks",
-            dependencies: [
-                .product(name: "SwiftyScripty", package: "swifty-scripty"),
-                .product(name: "SwiftyScriptyMocks", package: "swifty-scripty"),
-                "TestScript"
-            ],
-            path: "Mocks"
-        ),
-        .testTarget(
-            name: "TestScriptTests",
-            dependencies: [
-                "TestScript",
-                "TestScriptMocks",
-                .product(name: "SwiftyScripty", package: "swifty-scripty"),
-                .product(name: "SwiftyScriptyMocks", package: "swifty-scripty")
-            ]
-        ),
     ]
 )
