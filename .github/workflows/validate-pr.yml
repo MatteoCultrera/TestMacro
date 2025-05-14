@@ -15,7 +15,7 @@ jobs:
       - name: Install Swift
         uses: fwal/setup-swift@v1
         with:
-          swift-version: '5.9'
+          swift-version: '5.7'
       - name: Build tests script
         run: make build-tests-ci
       - name: Run tests
