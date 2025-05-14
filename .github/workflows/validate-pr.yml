@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
-      - name: Install Swift
-        uses: fwal/setup-swift@v1
-        with:
-          swift-version: '6.1'
       - name: Run tests
+        uses: swift-actions/setup-swift@v2
         run: swift test
