@@ -10,8 +10,8 @@ jobs:
     name: Wait for all jobs to complete
     runs-on: ubuntu-latest
     steps:
+      - uses: swift-actions/setup-swift@v2
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
       - name: Run tests
-        uses: swift-actions/setup-swift@v2
         run: swift test
