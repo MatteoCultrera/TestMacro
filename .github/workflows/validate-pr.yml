@@ -2,6 +2,9 @@ name: primary
 description: >-
   Allow you to gate your merge requests based on the status of jobs in your workflow.
 
+on:
+  workflow_dispatch:
+
 jobs:
   all-check:
     name: Wait for all jobs to complete
