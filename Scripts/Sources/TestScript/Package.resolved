@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swifty-scripty",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PrometheusBytes/swifty-scripty",
+      "state" : {
+        "revision" : "95a7c624152a6c1dd2e0d18b6a9d27e98253984a",
+        "version" : "0.3.0"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -1,0 +1,11 @@
+{
+    "scripts": [
+        {
+            "name": "TestScript",
+            "sources": "./Sources/TestScript",
+            "generated-injection-keys-path": "./Sources/TestScript/Generated",
+            "generated-mocks-path": "./Mocks/TestScript/Generated",
+            "generated-mock-keys-path": "./Mocks/TestScript/Generated"
+        }
+    ]
+}
