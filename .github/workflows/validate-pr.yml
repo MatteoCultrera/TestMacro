@@ -2,38 +2,6 @@ name: primary
 description: >-
   Allow you to gate your merge requests based on the status of jobs in your workflow.
 
-on:
-  workflow_call:
-    inputs:
-      poll-frequency:
-        default: 30
-        type: number
-        description: >-
-          Frequency in seconds to poll the status of the jobs
-        required: false
-      excluded-checks:
-        type: string
-        default: ""
-        description: >-
-          Job names to exclude from the check, as a comma-separated list or
-          serialized as a JSON string
-        required: false
-      allowed-failures:
-        type: string
-        default: ""
-        description: >-
-          Job names that are allowed to fail and not affect the outcome,
-          as a comma-separated list or serialized as a JSON string
-        required: false
-      allowed-skips:
-        type: string
-        default: ""
-        description: >-
-          Job names that are allowed to be skipped and not affect the
-          outcome, as a comma-separated list or serialized as a JSON string
-        required: false
-  workflow_dispatch:
-
 jobs:
   all-check:
     name: Wait for all jobs to complete
