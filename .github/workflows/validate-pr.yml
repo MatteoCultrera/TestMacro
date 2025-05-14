@@ -8,10 +8,13 @@ on:
 jobs:
   all-check:
     name: Wait for all jobs to complete
-    runs-on: macos-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
+      - name: Install Swift
+        uses: fwal/setup-swift@v1
+        with:
+          swift-version: '5.9'
       - name: Run tests
-        working-directory: Scripts/bin
-        run: ./test-script
+        run: swift test
