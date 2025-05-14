@@ -8,9 +8,15 @@ on:
 jobs:
   all-check:
     name: Wait for all jobs to complete
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '6.1'
+      - name: Installing system dependencies...
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang libicu-dev build-essential
       - name: Check out the repository to the runner
         uses: actions/checkout@v4
       - name: Run tests
